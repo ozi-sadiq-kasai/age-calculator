@@ -13,21 +13,21 @@
     <section class="date">
       <ul class="date__list">
         <li class="date__item">
-          <label for="input__day">DAY</label>
+          <label id='label__day'for="input__day">DAY</label>
           <input id='input__day'class="input__date" type="text"placeholder="DD">
           <small class="date__required">This field is required</small>
           <small class="date__error error">Must be a valid day</small>
         </li>
         <li class="date__item">
-          <label for="input__month">MONTH</label>
+          <label id='label__month'for="input__month">MONTH</label>
           <input id='input__month'class="input__date" type="text" placeholder="MM">
-          <small class="date__required">This field is required</small>
+          <small class="month date__required">This field is required</small>
           <small class="month__error error">Must be a valid month</small>
         </li>
         <li class="date__item">
-          <label for="input__year">YEAR</label>
+          <label id='label__year' for="input__year">YEAR</label>
           <input id='input__year'class="input__date" type="text" placeholder="YYYY">
-          <small class="date__required">This field is required</small><small class="year__error error">Must be a valid year</small>
+          <small class="year date__required">This field is required</small><small class="year__error error">Must be in the past</small>
         </li>
       </ul>
     </section>
@@ -45,7 +45,7 @@
           <p class="dash__date"> months</p>
         </div>
         <div class="display__div">
-          <p class='dash'id="display__days">--</p>
+          <p class='dash'id="display__day">--</p>
           <p class="dash__date"> days</p>
         </div>  
     </section>
