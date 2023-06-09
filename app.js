@@ -24,11 +24,10 @@ if(dayValue === ''){
   datesRequired.style.display = 'block'
   dayin.style.border = errorStyle
   document.querySelector('#label__day').style.color ='hsl(0, 100%, 67%)'
+  displayError(document.querySelector('.date'),dayin,document.querySelector('#label__day'))
 }
 else if(dayValue > daysOption){
-  document.querySelector('.date__error').style.display='block'
-  dayin.style.border = errorStyle
-  document.querySelector('#label__day').style.color ='hsl(0, 100%, 67%)'
+  displayError(document.querySelector('.date__error'),dayin,document.querySelector('#label__day'))
 }
 else{
   dayout.textContent = date.getDate() - dayValue
@@ -37,16 +36,11 @@ else{
 // Validate Month
   let monthValue = monthin.value
   if(monthValue === ''){
-    // datesRequired.style.display = 'block'
-    document.querySelector('.month').style.display='block'
-    monthin.style.border = errorStyle
-    document.querySelector('#label__month').style.color ='hsl(0, 100%, 67%)'
+    displayError(document.querySelector('.month'),monthin,document.querySelector('#label__month'))
 
   }
   else if(monthValue > 12){
-    document.querySelector('.month__error').style.display= 'block'
-    monthin.style.border =errorStyle
-    document.querySelector('#label__month').style.color ='hsl(0, 100%, 67%)'
+    displayError(document.querySelector('.month__error'),monthin,document.querySelector('#label__month'))
   }
   else{
     monthout.textContent = date.getMonth()+1 - monthValue
@@ -55,23 +49,18 @@ else{
 // Validate Year
   let yearValue = yearin.value
   if(yearValue === ''){
-    document.querySelector('.year').style.display = 'block'
-    yearin.style.border = errorStyle
-    document.querySelector('#label__year').style.color ='hsl(0, 100%, 67%)'
+    displayError(document.querySelector('.year'),yearin,document.querySelector('#label__year'))
   } 
   else if(yearValue > date.getFullYear()){
-    document.querySelector('.year__error').style.display= 'block'
-    yearin.style.border = errorStyle
-    document.querySelector('#label__year').style.color ='hsl(0, 100%, 67%)'
-    // displayError(document.querySelector('.year__error'),yearin,document.querySelector('#label__year'))
+    displayError(document.querySelector('.year__error'),yearin,document.querySelector('#label__year'))
   } 
   else{
     yearout.textContent = date.getFullYear() - yearValue
   }
 })
 
-// function displayError(errorMessage, inputField, label) {
-//   errorMessage.style.display = 'block';
-//   inputField.style.border = errorStyle;
-//   label.style.color = 'hsl(0, 100%, 67%)';
-// }
+function displayError(errorMessage, inputField, label) {
+  errorMessage.style.display = 'block';
+  inputField.style.border = errorStyle;
+  label.style.color = 'hsl(0, 100%, 67%)';
+}

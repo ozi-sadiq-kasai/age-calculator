@@ -16,8 +16,7 @@ body{
 }
 
 main{
-  min-width: 400px;
-  min-height: 300px;
+  min-width: 500px;
   border-radius:10px 10px 70px;
   padding:35px;
   background-color:hsl(0, 0%, 100%);
@@ -44,6 +43,8 @@ label{
   border:1px solid hsl(0, 0%, 94%);
   border-radius:4px;
   outline: none;
+  font-weight: 800;
+  color:hsl(0, 0%, 8%);
 }
 
 
@@ -61,8 +62,8 @@ background-color:hsl(259, 100%, 65%);
 padding:6px;
 border-radius: 50%;
 position:absolute;
-top:250px;
-right:470px;
+top:425px;
+right:495px;
 width:37px;
 cursor: pointer;
 }
@@ -88,5 +89,26 @@ cursor: pointer;
   color:hsl(0, 100%, 67%);
   padding-top: 3px;
   display:none;
+}
+
+/* smartphone */
+@media screen and (max-width:375px){
+  main{
+    min-width:100px;
+    padding:25px;
+  }
+  #btn{
+    background-color:hsl(259, 100%, 65%);
+    padding:6px;
+    border-radius: 50%;
+    position:absolute;
+    top:440px;
+    right:180px;
+    width:40px;
+    cursor: pointer;
+    }
+    .date__list{
+      margin-bottom: 60px;
+    }  
 }
 
